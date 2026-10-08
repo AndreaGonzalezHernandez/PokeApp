@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "925089129880",
+    "project_id": "pokemon117-64f36",
+    "storage_bucket": "pokemon117-64f36.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:925089129880:android:7a430dd9420f2a71fab7ed",
+        "android_client_info": {
+          "package_name": "com.cesba.pokeapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyArmijHsGbZt2WodSfjlvOCwDOtF3YjUKc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

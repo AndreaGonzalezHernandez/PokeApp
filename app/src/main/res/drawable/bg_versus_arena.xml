@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Estadio pixel-art (pensado para una arena de 280dp de alto) -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Tierra del campo -->
+    <item>
+        <shape android:shape="rectangle">
+            <gradient android:angle="270" android:startColor="#B5653B" android:endColor="#7A3B22" />
+        </shape>
+    </item>
+    <!-- Gradas / muro del estadio -->
+    <item android:bottom="180dp">
+        <shape android:shape="rectangle">
+            <gradient android:angle="270" android:startColor="#3F3A56" android:endColor="#6E6890" />
+        </shape>
+    </item>
+    <item android:top="24dp" android:bottom="254dp">
+        <shape android:shape="rectangle"><solid android:color="#2F2B44" /></shape>
+    </item>
+    <item android:top="52dp" android:bottom="226dp">
+        <shape android:shape="rectangle"><solid android:color="#2F2B44" /></shape>
+    </item>
+    <!-- Barda blanca -->
+    <item android:top="78dp" android:bottom="168dp">
+        <shape android:shape="rectangle">
+            <gradient android:angle="270" android:startColor="#F1F5FB" android:endColor="#AEB9D3" />
+        </shape>
+    </item>
+    <item android:top="112dp" android:bottom="162dp">
+        <shape android:shape="rectangle"><solid android:color="#5A2A16" /></shape>
+    </item>
+    <!-- Líneas del campo -->
+    <item android:top="140dp" android:bottom="12dp" android:left="-70dp" android:right="-70dp">
+        <shape android:shape="oval">
+            <stroke android:width="3dp" android:color="#D08A5C" />
+        </shape>
+    </item>
+    <item android:top="200dp" android:bottom="77dp">
+        <shape android:shape="rectangle"><solid android:color="#C27A4E" /></shape>
+    </item>
+</layer-list>

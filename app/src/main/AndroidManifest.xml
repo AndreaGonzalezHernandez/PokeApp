@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- 🌐 Permiso de Internet para Retrofit, Picasso y Firebase Auth -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar"
+        tools:targetApi="31">
+
+        <!-- 🚀 Pantalla de Splash -->
+        <activity
+            android:name=".SplashActivity"
+            android:exported="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Pantalla de Login -->
+        <activity
+            android:name=".LoginActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <!-- Pantalla de Registro -->
+        <activity
+            android:name=".RegisterActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <!-- Menú Principal / Pokédex -->
+        <activity
+            android:name=".PokedexActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <!-- Buscador de Pokémon -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <!-- Perfil de Usuario -->
+        <activity
+            android:name=".PerfilActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <!-- ⚔️ Módulos de Combate y Torre (Agregados para evitar ActivityNotFoundException) -->
+        <activity
+            android:name=".BattleEmulatorActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".BattleVersusActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".TorrePokemonActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <!-- ⭐ Favoritos con imágenes -->
+        <activity
+            android:name=".FavoritesActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <!-- 🗃 Selector de Pokémon estilo "Equipo y Cajas" -->
+        <activity
+            android:name=".PokemonBoxActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+
+    </application>
+
+</manifest>

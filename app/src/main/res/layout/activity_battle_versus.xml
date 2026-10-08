@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1A202C"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Título principal -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Battle Versus (1v1 Local)"
+            android:textColor="#F6E05E"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <!-- Contenedor del enfrentamiento (J1 vs J2) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="#2D3748"
+            android:orientation="horizontal"
+            android:padding="12dp">
+
+            <!-- JUGADOR 1 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvP1Name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="J1: Pikachu"
+                    android:textColor="#63B3ED"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/imgP1Pokemon"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="8dp"
+                    android:contentDescription="Pokémon J1"
+                    android:src="@mipmap/ic_launcher" />
+
+                <ProgressBar
+                    android:id="@+id/pbP1Hp"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="12dp"
+                    android:layout_marginTop="8dp"
+                    android:progress="100"
+                    android:progressTint="#48BB78" />
+
+                <Button
+                    android:id="@+id/btnSelectP1"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="8dp"
+                    android:backgroundTint="#3182CE"
+                    android:padding="0dp"
+                    android:text="Elegir J1"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:text="VS"
+                android:textColor="#F6E05E"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <!-- JUGADOR 2 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvP2Name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="J2: Charmander"
+                    android:textColor="#FC8181"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/imgP2Pokemon"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="8dp"
+                    android:contentDescription="Pokémon J2"
+                    android:src="@mipmap/ic_launcher" />
+
+                <ProgressBar
+                    android:id="@+id/pbP2Hp"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="12dp"
+                    android:layout_marginTop="8dp"
+                    android:progress="100"
+                    android:progressTint="#48BB78" />
+
+                <Button
+                    android:id="@+id/btnSelectP2"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="8dp"
+                    android:backgroundTint="#E53E3E"
+                    android:padding="0dp"
+                    android:text="Elegir J2"
+                    android:textSize="12sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Indicador de Turno -->
+        <TextView
+            android:id="@+id/tvTurnIndicator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:text="Turno: Jugador 1"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <!-- Historial / Registro de batalla -->
+        <TextView
+            android:id="@+id/tvVersusLog"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginTop="12dp"
+            android:background="#2D3748"
+            android:padding="12dp"
+            android:text="Comienza la batalla multijugador. ¡Selecciona tus Pokémon o realiza un ataque!"
+            android:textColor="#E2E8F0"
+            android:textSize="13sp" />
+
+        <!-- Botones de Ataque -->
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:alignmentMode="alignMargins"
+            android:columnCount="2"
+            android:rowCount="1">
+
+            <Button
+                android:id="@+id/btnVersusAttack1"
+                android:layout_width="0dp"
+                android:layout_height="52dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="4dp"
+                android:backgroundTint="#3182CE"
+                android:text="Ataque Fuerte" />
+
+            <Button
+                android:id="@+id/btnVersusAttack2"
+                android:layout_width="0dp"
+                android:layout_height="52dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="4dp"
+                android:backgroundTint="#DD6B20"
+                android:text="Ataque Rápido" />
+        </GridLayout>
+
+    </LinearLayout>
+</ScrollView>
